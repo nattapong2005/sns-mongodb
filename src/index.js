@@ -9,6 +9,7 @@ const cors = require("cors");
 
 // Create variable route
 const postRoute = require("./routes/post.route");
+const userRoute = require("./routes/user.route");
 
 
 app.use(cors());
@@ -25,6 +26,7 @@ app.get("/", (req, res)=>{
 
 // Create route
 app.use("/posts", postRoute);
+app.use("/users", userRoute);
 
 
 app.listen(port, () => {
